@@ -1,0 +1,2 @@
+# Serendipia
+Projecto Serendipia
