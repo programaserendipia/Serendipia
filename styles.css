@@ -1,0 +1,195 @@
+/* Paleta extraída de los logos de STEAM Serendipia */
+:root{
+  --indigo:#3b2a8c;     /* azul-violeta profundo del "8" */
+  --purple:#7a2e8f;     /* púrpura */
+  --magenta:#d81e7f;    /* rosa/magenta */
+  --steel:#3f5c9e;      /* azul acero del texto "TEAM SERENDIPIA" */
+  --lavender:#f1ebf8;   /* fondo claro */
+  --ink:#23204a;
+  --grad:linear-gradient(90deg,var(--indigo),var(--purple),var(--magenta));
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.55;
+}
+a{color:var(--steel);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Barra de navegación: logo + menú + Inscríbete, sticky */
+.navbar{
+  display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;
+  background:var(--indigo);
+  padding:.6rem clamp(1rem,3vw,2rem);
+  position:sticky;top:0;z-index:10;
+  border-bottom:3px solid transparent;border-image:var(--grad) 1;
+}
+.navbar .brand img{height:48px;display:block;background:#fff;padding:.3rem .55rem;border-radius:10px}
+.main-nav{flex:1;display:flex;justify-content:center;flex-wrap:wrap;gap:1.6rem}
+.main-nav a{color:#fff;font-weight:600;font-size:.95rem;padding:.2rem .1rem;border-bottom:2px solid transparent}
+.main-nav a:hover{border-bottom-color:var(--magenta);text-decoration:none}
+.nav-cta{display:flex;gap:.6rem;flex-wrap:wrap}
+.cta-btn{
+  background:var(--magenta);color:#fff;font-weight:700;
+  padding:.55rem 1.1rem;border-radius:999px;white-space:nowrap;
+}
+.cta-btn:hover{background:var(--purple);text-decoration:none}
+.cta-outline{background:transparent;border:2px solid #fff;padding:.4rem 1rem}
+.cta-outline:hover{background:#fff;color:var(--indigo)}
+
+/* Secciones — estilo ECOSUR: fondo claro, marca de agua tenue de rombos */
+.section,.section-alt{
+  padding:6rem clamp(1.5rem,4vw,3.5rem);
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180"><g fill="none" stroke="%23000" stroke-opacity="0.035" stroke-width="16"><path d="M0 0L90 90L0 180"/><path d="M180 0L90 90L180 180"/></g></svg>');
+  background-position:center;
+}
+.section-alt{background-color:#f4f4f7}
+.section > *,.section-alt > *{max-width:1800px;margin-left:auto;margin-right:auto}
+.section-title{color:#1b1b2b;font-size:clamp(2.4rem,4.5vw,3.6rem);font-weight:800;margin:0;text-align:center;letter-spacing:-.02em}
+.section-sub{text-align:center;color:#5b5b6b;margin:.6rem auto 2.4rem;max-width:60ch}
+
+/* Próximos eventos y Quiénes somos: fondo de color con el patrón visible (claro) */
+#eventos,#quienes{
+  background-color:var(--purple);
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180"><g fill="none" stroke="%23fff" stroke-opacity="0.08" stroke-width="16"><path d="M0 0L90 90L0 180"/><path d="M180 0L90 90L180 180"/></g></svg>');
+}
+#eventos .section-title,#quienes .section-title{color:#fff}
+#eventos .section-sub,#quienes .section-sub{color:rgba(255,255,255,.85)}
+
+/* Tarjetas genéricas */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.card{
+  background:#fff;border:1px solid #eee;border-top:4px solid var(--purple);
+  border-radius:12px;padding:1.4rem;box-shadow:0 4px 14px rgba(59,42,140,.06);
+}
+.card h3{color:var(--purple);margin:.2rem 0 .6rem}
+
+/* Datos rápidos */
+.facts{
+  list-style:none;padding:0;margin:2.5rem 0 0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;text-align:center;
+}
+.facts li{background:#fff;border-radius:12px;padding:1.2rem;border:1px solid #eee}
+.facts strong{display:block;font-size:1.6rem;color:var(--magenta)}
+.facts span{font-size:.9rem;color:#555}
+
+/* STEAM */
+.steam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem}
+.steam-card{background:#fff;border-radius:12px;padding:1.4rem;text-align:center;border:1px solid #eee}
+.steam-letter{
+  display:inline-grid;place-items:center;width:56px;height:56px;border-radius:50%;
+  background:var(--grad);color:#fff;font-size:1.6rem;font-weight:800;margin-bottom:.5rem;
+}
+.steam-card h3{margin:.2rem 0;color:var(--indigo)}
+.steam-card p{margin:0;color:#666;font-size:.9rem}
+
+/* Eventos */
+.events-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;align-items:start}
+.events-loading{text-align:center;color:#888;grid-column:1/-1}
+.event-card{
+  background:#fff;border-radius:14px;overflow:hidden;border:1px solid #eee;
+  box-shadow:0 6px 18px rgba(59,42,140,.08);display:flex;flex-direction:column;
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.event-card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(216,30,127,.16)}
+.event-img{position:relative;background:var(--lavender)}
+.event-img img{width:100%;height:auto;display:block;cursor:zoom-in}
+
+/* Lightbox */
+#lightbox{border:none;padding:0;background:transparent;max-width:96vw;max-height:96vh}
+#lightbox::backdrop{background:rgba(35,32,74,.88)}
+#lightbox img{max-width:96vw;max-height:96vh;display:block;border-radius:8px;cursor:zoom-out}
+.event-date{
+  position:absolute;top:.8rem;left:.8rem;background:var(--magenta);color:#fff;
+  border-radius:10px;text-align:center;padding:.4rem .6rem;line-height:1;box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+.event-date .day{display:block;font-size:1.4rem;font-weight:800}
+.event-date .mon{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em}
+.event-body{padding:1.1rem;display:flex;flex-direction:column;gap:.5rem}
+.event-body h3{margin:0;color:var(--indigo);font-size:1.1rem}
+.event-body p{margin:0;color:#555;font-size:.92rem}
+.event-body .cta-btn{align-self:flex-start;font-size:.9rem}
+
+/* Eventos anteriores — carrusel banner de ancho completo */
+#anteriores{padding:0 0 1.5rem}
+#anteriores .slider{max-width:none}
+#anteriores .slides-viewport{border-radius:0}
+.slider{margin:0 auto}
+.slides-viewport{position:relative;overflow:hidden;border-radius:16px;box-shadow:0 10px 30px rgba(59,42,140,.15)}
+.slides{display:flex;transition:transform .45s ease}
+.slide{position:relative;min-width:100%;margin:0}
+.slide img{width:100%;height:clamp(380px,46vw,640px);object-fit:cover;display:block}
+.slide figcaption{
+  position:absolute;left:0;right:0;bottom:0;color:#fff;
+  padding:3rem 1.5rem 1.3rem;
+  background:linear-gradient(transparent,rgba(35,32,74,.9));
+}
+.slide figcaption h3{margin:0 0 .35rem;font-size:clamp(1.2rem,2.5vw,1.7rem)}
+.slide figcaption p{margin:0;font-size:1rem;max-width:65ch;opacity:.95}
+.slider-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:2;
+  width:46px;height:46px;border:none;border-radius:50%;cursor:pointer;
+  background:rgba(255,255,255,.9);color:var(--indigo);font-size:1.3rem;line-height:1;
+  box-shadow:0 2px 10px rgba(0,0,0,.25);
+}
+.slider-arrow.prev{left:.7rem}
+.slider-arrow.next{right:.7rem}
+.slider-arrow:hover{background:var(--indigo);color:#fff}
+.slider-dots{display:flex;gap:.5rem;justify-content:center;margin-top:1rem}
+.slider-dots .dot{width:11px;height:11px;border-radius:50%;border:none;cursor:pointer;background:#cfc7e3;padding:0}
+.slider-dots .dot.active{background:var(--magenta)}
+
+/* Sección mentoras en color sólido (sin marca de agua) */
+#mentoras{background-image:none;background-color:#ececf1}
+
+/* Mentoras — carrusel de fotos circulares (estilo "Personal académico") */
+.carousel{display:flex;align-items:center;gap:.5rem}
+.car-arrow{
+  flex:0 0 auto;width:44px;height:44px;border:none;border-radius:50%;cursor:pointer;
+  background:#fff;color:var(--indigo);font-size:1.2rem;line-height:1;
+  box-shadow:0 2px 10px rgba(59,42,140,.18);
+}
+.car-arrow:hover{background:var(--indigo);color:#fff}
+.mentoras-track{
+  flex:1;min-width:0;display:flex;gap:1.5rem;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:.5rem .2rem 1rem;scrollbar-width:thin;
+}
+.mentora{flex:0 0 200px;scroll-snap-align:start;text-align:center}
+.mentora .avatar{
+  width:150px;height:150px;margin:0 auto .8rem;border-radius:50%;overflow:hidden;
+  display:grid;place-items:center;
+  background:var(--grad);color:#fff;font-size:2.4rem;font-weight:800;
+  border:4px solid #fff;box-shadow:0 0 0 3px var(--indigo);
+}
+.mentora .avatar img{width:100%;height:100%;object-fit:cover}
+.mentora h3{margin:0;color:#1b1b2b;font-size:1.05rem}
+.mentora p{margin:.15rem 0 0;color:#5b5b6b;font-size:.85rem}
+
+/* Footer */
+.site-footer{background:var(--indigo);color:#fff;padding:3rem 1.5rem 1.5rem;margin-top:2rem}
+.footer-cols{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}
+.footer-cols h4{color:#fff;margin:0 0 .6rem;border-bottom:2px solid var(--magenta);display:inline-block;padding-bottom:.2rem}
+.footer-cols a{color:#e9d9f3}
+.footer-logo{height:48px;background:#fff;padding:.4rem .6rem;border-radius:8px}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.2);font-size:.85rem;opacity:.85;text-align:center}
+
+/* Banner institucional (Ciencia y Tecnología / INAOE) — banda blanca a todo lo ancho */
+.footer-banner{background:#fff;margin:2rem -1.5rem -1.5rem;padding:1.4rem 1.5rem;text-align:center}
+.footer-banner img{max-width:min(820px,92%);height:auto;display:block;margin:0 auto}
+
+/* Redes sociales dentro del footer */
+.social-icons{display:flex;gap:1rem}
+.soc-icon{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;transition:transform .15s ease}
+.soc-icon svg{width:24px;height:24px;fill:#fff}
+.soc-icon:hover{transform:translateY(-3px);text-decoration:none}
+.soc-icon.fb{background:#1877f2}
+.soc-icon.ig{background:radial-gradient(circle at 30% 110%,#fdf497 0%,#fd5949 45%,#d6249f 65%,#285aeb 100%)}
+.soc-icon.mail{background:var(--magenta)}
+
+@media(max-width:600px){
+  .main-nav{order:3;width:100%}
+}

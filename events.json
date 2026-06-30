@@ -1,0 +1,30 @@
+[
+  {
+    "fecha": "2026-07-02",
+    "titulo": "Convocatoria Abierta 2026 — 6ª edición",
+    "resumen": "En alianza con el INAOE. Para niñas de 11 a 15 años con apoyo de mamá, papá o tutor. Cierre de inscripción: 2 de julio.",
+    "imagen": "assets/events/convocatoria-2026.jpeg",
+    "enlace": "https://forms.gle/KEgNf7Yb5vnSqw5c8"
+  },
+  {
+    "fecha": "2026-07-11",
+    "titulo": "¡Sé parte de la 6ª edición!",
+    "resumen": "Un taller para niñas curiosas que quieren transformar sus ideas en el futuro. Inicia 11 de julio, sábados de 10:00 a 12:30 h.",
+    "imagen": "assets/events/sexta-edicion.jpeg",
+    "enlace": "https://forms.gle/KEgNf7Yb5vnSqw5c8"
+  },
+  {
+    "fecha": "2026-07-11",
+    "titulo": "¿Cómo es nuestro taller?",
+    "resumen": "Un espacio para aprender, explorar y descubrir tu potencial en las áreas STEAM. 6 sesiones en línea con constancia de validez oficial.",
+    "imagen": "assets/events/como-es-taller.jpeg",
+    "enlace": "https://forms.gle/KEgNf7Yb5vnSqw5c8"
+  },
+  {
+    "fecha": "2026-07-11",
+    "titulo": "No es solo un taller…",
+    "resumen": "Es donde muchas niñas descubren lo que quieren ser. Por una familia STEAM más informada, por una joven mujer mejor preparada.",
+    "imagen": "assets/events/no-es-solo-taller.jpeg",
+    "enlace": "https://forms.gle/KEgNf7Yb5vnSqw5c8"
+  }
+]

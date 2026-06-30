@@ -1,0 +1,15 @@
+[
+  { "nombre": "Juana Medina Márquez",          "rol": "Mentora STEAM", "foto": "assets/mentoras/Juana.jpeg" },
+  { "nombre": "Isabel Labra Medina",            "rol": "Mentora STEAM", "foto": "assets/mentoras/Isabel.jpeg" },
+  { "nombre": "Jhoselin Daniel Tecpoyotl",      "rol": "Mentora STEAM", "foto": "assets/mentoras/Jhoselin.jpeg" },
+  { "nombre": "Ana Loren Hernández Moreno",     "rol": "Mentora STEAM", "foto": "assets/mentoras/Loren.jpeg" },
+  { "nombre": "Alma Rosa Argüelles Ortiz",      "rol": "Mentora STEAM", "foto": "assets/mentoras/Alma_Rosa.jpeg" },
+  { "nombre": "Mayra Mabel Valerdi",            "rol": "Mentora STEAM", "foto": "" },
+  { "nombre": "Fernanda Mildred Calderón Reyes","rol": "Mentora STEAM", "foto": "" },
+  { "nombre": "Nayeli Ángel Pérez",             "rol": "Mentora STEAM", "foto": "assets/mentoras/Nayeli.jpeg" },
+  { "nombre": "Erika Valerdi Negreros",         "rol": "Mentora STEAM", "foto": "" },
+  { "nombre": "Alma Griselda Pinillo Flores",   "rol": "Mentora STEAM", "foto": "assets/mentoras/Alma_Pinillo.jpeg" },
+  { "nombre": "Karen Gabriela García Quiroz",   "rol": "Mentora STEAM", "foto": "" },
+  { "nombre": "María Teresa Orozco Aguilera",   "rol": "Mentora STEAM", "foto": "" },
+  { "nombre": "Karla Jessica Jiménez Rodríguez","rol": "Mentora STEAM", "foto": "" }
+]
